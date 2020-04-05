@@ -1,0 +1,1336 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #f2f2f2;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body .container {
+  max-width: 70%;
+  margin: 0em auto;
+  padding: 4em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .container h1 {
+  font-size: 30px;
+  margin: 20px 0 10px;
+  color: #cb3b3b;
+}
+
+@media screen and (max-width: 610px) {
+  body .container h1 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body .container h1 {
+    font-size: 20px;
+    max-width: 95%;
+    text-align: center;
+  }
+}
+
+body .container p.subheading {
+  font-size: 16px;
+  color: #666666;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 610px) {
+  body .container p.subheading {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body .container p.subheading {
+    font-size: 13px;
+    max-width: 95%;
+    text-align: center;
+  }
+}
+
+body .container .input-grp {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2px;
+}
+
+body .container .input-grp input[type="text"] {
+  width: 90%;
+  min-width: 370px;
+  padding: 0.55em 0.75em;
+  font-size: 15px;
+  color: black;
+  margin: 0 10px;
+  border: 1.5px solid rgba(119, 119, 119, 0.8);
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .container .input-grp input[type="text"]:hover {
+  border-color: rgba(30, 30, 30, 0.623);
+}
+
+body .container .input-grp input[type="text"]:focus {
+  border-color: #cb3b3b;
+}
+
+body .container .input-grp input[type="text"]::-webkit-input-placeholder {
+  font-size: 14px;
+}
+
+body .container .input-grp input[type="text"]:-ms-input-placeholder {
+  font-size: 14px;
+}
+
+body .container .input-grp input[type="text"]::-ms-input-placeholder {
+  font-size: 14px;
+}
+
+body .container .input-grp input[type="text"]::placeholder {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 610px) {
+  body .container .input-grp {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .container .input-grp input[type="text"] {
+    width: auto;
+    margin: 20px 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body .container .input-grp input[type="text"] {
+    min-width: 95%;
+  }
+}
+
+body .container .displayValidity {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  margin: 0px 0;
+  font-size: 13px;
+}
+
+body .container .reset-all,
+body .container .reset-btn {
+  background-color: #c03546;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  margin: 0 10px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .container .reset-all:hover,
+body .container .reset-btn:hover {
+  background-color: #c94e4e;
+}
+
+body .container .reset-all {
+  margin-top: 30px;
+}
+
+body .container .gen-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+body .container .gen-btns #generate {
+  background-color: rgba(226, 93, 40, 0.95);
+  background-color: #cb3b3b;
+  padding: 10px 20px;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+  margin: 30px 15px 20px;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .container .gen-btns #generate:hover {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+body .container .gen-btns #generate-strong {
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 14px;
+  background: none;
+  color: #333333;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .container .gen-btns #generate-strong::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 10%;
+  left: 5%;
+  height: 1px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #000000;
+}
+
+body .container .gen-btns #generate-strong::after {
+  left: 0;
+  right: auto;
+}
+
+body .container .gen-btns #generate-strong:hover {
+  color: black;
+}
+
+body .container .gen-btns #generate-strong:hover::before {
+  width: 90%;
+}
+
+@media screen and (max-width: 400px) {
+  body .container .gen-btns {
+    min-width: 190px;
+  }
+}
+
+body .container .radio-btns {
+  width: 100%;
+  min-height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 0 20px;
+}
+
+body .container .radio-btns .radio-btn {
+  min-width: 160px;
+  height: 100%;
+  margin: 0 20px;
+  border-radius: 0.3em;
+  padding: 0.5em 1em;
+  -webkit-box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.04), -7px -7px 5px rgba(255, 255, 255, 0.6);
+          box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.04), -7px -7px 5px rgba(255, 255, 255, 0.6);
+  border: 2px solid rgba(235, 235, 235, 0.6);
+}
+
+body .container .radio-btns .radio-btn input {
+  display: none;
+  pointer-events: none;
+}
+
+body .container .radio-btns .radio-btn input + label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+body .container .radio-btns .radio-btn input + label .custom-radio {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #ee8844;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container .radio-btns .radio-btn input + label .custom-radio div {
+  border-radius: 50%;
+  height: 0.5em;
+  width: 0.5em;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+body .container .radio-btns .radio-btn input + label span {
+  margin-left: 8px;
+}
+
+body .container .radio-btns .radio-btn input:checked + label .custom-radio div {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background-color: #ee8844;
+}
+
+@media screen and (max-width: 610px) {
+  body .container .radio-btns {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .container .radio-btns .radio-btn {
+    margin: 15px 20px;
+  }
+}
+
+body .container .uppercase-toggle {
+  border-radius: 0.3em;
+  padding: 0.5em 1em;
+  -webkit-box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.04), -7px -7px 5px rgba(255, 255, 255, 0.6);
+          box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.04), -7px -7px 5px rgba(255, 255, 255, 0.6);
+  border: 2px solid rgba(235, 235, 235, 0.6);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+body .container .uppercase-toggle input {
+  display: none;
+  pointer-events: none;
+}
+
+body .container .uppercase-toggle input + label {
+  cursor: pointer;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .uppercase-toggle input + label svg {
+  width: 30px;
+  stroke: #ee8844;
+  stroke-width: 5;
+  fill: white;
+}
+
+body .container .uppercase-toggle input + label svg .box {
+  stroke-dasharray: 320;
+  stroke-dashoffset: 0;
+  fill: white;
+  -webkit-transition: stroke-dashoffset 0.3s linear;
+  transition: stroke-dashoffset 0.3s linear;
+}
+
+body .container .uppercase-toggle input + label svg .check {
+  stroke-dasharray: 70;
+  stroke-dashoffset: 70;
+  fill: none;
+  -webkit-transition: stroke-dashoffset 0.3s linear;
+  transition: stroke-dashoffset 0.3s linear;
+}
+
+body .container .uppercase-toggle input + label span {
+  margin-left: 8px;
+}
+
+body .container .uppercase-toggle input:checked + label .box {
+  stroke-dashoffset: 320;
+}
+
+body .container .uppercase-toggle input:checked + label .check {
+  stroke-dashoffset: 0;
+}
+
+body .container .numeric-toggled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+body .container .symbol-toggle {
+  -webkit-box-shadow: inset 7px 7px 5px rgba(0, 0, 0, 0.04), inset -7px -7px 5px rgba(255, 255, 255, 0.6);
+          box-shadow: inset 7px 7px 5px rgba(0, 0, 0, 0.04), inset -7px -7px 5px rgba(255, 255, 255, 0.6);
+  border: 2px solid rgba(235, 235, 235, 0.6);
+  margin: 20px 0 0;
+  border-radius: 0.3em;
+  padding: 0.5em 1em;
+}
+
+body .container .symbol-toggle input {
+  display: none;
+  pointer-events: none;
+}
+
+body .container .symbol-toggle input + label {
+  cursor: pointer;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 20px;
+}
+
+body .container .symbol-toggle input + label .symbol-switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45px;
+  height: 25px;
+  margin: 0 10px 0 20px;
+  background-color: #aaaaaa;
+  border-radius: 20px;
+  padding: 3.75px 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .container .symbol-toggle input + label .symbol-switch .switch-inner {
+  border-radius: 50%;
+  width: 50%;
+  height: 100%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  background-color: white;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .container .symbol-toggle input:checked + label .symbol-switch {
+  background-color: #ee8844;
+}
+
+body .container .symbol-toggle input:checked + label .symbol-switch .switch-inner {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+body .container .saved-passwords-list {
+  width: 80%;
+  min-width: 650px;
+  margin: 20px 0;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container .saved-passwords-list .saved-password {
+  width: 100%;
+  padding: 30px 40px;
+  background: white;
+  min-height: 230px;
+  -webkit-box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.02);
+          box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.02);
+  border: 2px solid rgba(235, 235, 235, 0.6);
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+body .container .saved-passwords-list .saved-password .no-items-to-show {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+
+body .container .saved-passwords-list .saved-password .category {
+  position: relative;
+}
+
+body .container .saved-passwords-list .saved-password .category:first-child {
+  min-width: 100px;
+}
+
+body .container .saved-passwords-list .saved-password .category:nth-child(2) {
+  min-width: 270px;
+}
+
+body .container .saved-passwords-list .saved-password .category:last-child {
+  min-width: 230px;
+}
+
+body .container .saved-passwords-list .saved-password .category:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #cccccc;
+}
+
+body .container .saved-passwords-list .saved-password .category ul {
+  list-style: none;
+  text-align: center;
+}
+
+body .container .saved-passwords-list .saved-password .category ul li {
+  font-size: 15px;
+  position: relative;
+  color: #222222;
+  line-height: 40px;
+}
+
+body .container .saved-passwords-list .saved-password .category ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #cccccc;
+}
+
+body .container .saved-passwords-list .saved-password .category ul .head {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+body .container .saved-passwords-list .saved-password .category ul .opt-pass {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .saved-passwords-list .saved-password .category ul .opt-pass div {
+  margin: 0 5px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .saved-passwords-list .saved-password .category ul .opt-pass div svg {
+  margin: 0 0.5em;
+  width: 15px;
+}
+
+body .container .saved-passwords-list .saved-password .category ul .opt-pass div svg.view {
+  width: 1.2em;
+}
+
+body .container .saved-passwords-list .saved-password .category ul .opt-pass div svg path {
+  fill: #555555;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .container .saved-passwords-list .saved-password .category ul .opt-pass div:hover .delete path {
+  fill: #f85959;
+}
+
+body .container .saved-passwords-list .saved-password .category ul .opt-pass div:hover .view path {
+  fill: #0b36f5;
+}
+
+body .container .desc {
+  width: 100%;
+  min-width: 700px;
+  margin: 20px 0;
+}
+
+body .container .desc h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+}
+
+body .container .desc p {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555555;
+}
+
+body .container .desc p span {
+  font-weight: 600;
+  color: #444444;
+}
+
+@media screen and (max-width: 1024px) {
+  body .container {
+    max-width: 100%;
+  }
+  body .container .desc {
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  body .container .desc {
+    min-width: 550px;
+    width: 100%;
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  body .container .desc {
+    min-width: 90%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body .container .saved-passwords-list {
+    overflow-x: scroll;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    min-width: 95%;
+    margin: 20px auto;
+  }
+  body .container .saved-passwords-list .saved-password {
+    width: 650px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  body .container .saved-passwords-list {
+    min-width: 100%;
+  }
+  body .container .saved-passwords-list .saved-password {
+    width: 550px;
+    padding: 20px;
+  }
+  body .container .saved-passwords-list .saved-password .category:first-child {
+    min-width: 50px;
+  }
+  body .container .saved-passwords-list .saved-password .category:nth-child(2) {
+    min-width: 230px;
+  }
+  body .container .saved-passwords-list .saved-password .category:last-child {
+    min-width: 200px;
+  }
+  body .container .saved-passwords-list .saved-password .category ul .head {
+    margin-bottom: 10px;
+  }
+}
+
+body .pop-up-container,
+body .saved-password-view {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%) scale(0.1);
+          transform: translate(-50%, -50%) scale(0.1);
+  opacity: 0;
+  pointer-events: none;
+  width: 45%;
+  height: 60%;
+  min-width: 640px;
+  min-height: 400px;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+body .pop-up-container .pop-up,
+body .saved-password-view .pop-up {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .pop-up-container .pop-up .pop-up-headline,
+body .saved-password-view .pop-up .pop-up-headline {
+  font-size: 20px;
+  color: #222222;
+  margin-bottom: 30px;
+}
+
+body .pop-up-container .sec1,
+body .pop-up-container .sec2,
+body .pop-up-container .sec3,
+body .saved-password-view .sec1,
+body .saved-password-view .sec2,
+body .saved-password-view .sec3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  margin: 20px 0;
+}
+
+body .pop-up-container .sec1 .copied-msg,
+body .pop-up-container .sec2 .copied-msg,
+body .pop-up-container .sec3 .copied-msg,
+body .saved-password-view .sec1 .copied-msg,
+body .saved-password-view .sec2 .copied-msg,
+body .saved-password-view .sec3 .copied-msg {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  opacity: 0;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .pop-up-container .sec1 .copied-msg .text-msg,
+body .pop-up-container .sec2 .copied-msg .text-msg,
+body .pop-up-container .sec3 .copied-msg .text-msg,
+body .saved-password-view .sec1 .copied-msg .text-msg,
+body .saved-password-view .sec2 .copied-msg .text-msg,
+body .saved-password-view .sec3 .copied-msg .text-msg {
+  font-size: 11px;
+  font-weight: 400;
+  padding: 8px;
+  color: black;
+  background-color: #f6ea8c;
+}
+
+body .pop-up-container .sec1 .copied-msg .triangle,
+body .pop-up-container .sec2 .copied-msg .triangle,
+body .pop-up-container .sec3 .copied-msg .triangle,
+body .saved-password-view .sec1 .copied-msg .triangle,
+body .saved-password-view .sec2 .copied-msg .triangle,
+body .saved-password-view .sec3 .copied-msg .triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #f6ea8c transparent transparent transparent;
+}
+
+body .pop-up-container .sec1 .copy-msg-visible,
+body .pop-up-container .sec2 .copy-msg-visible,
+body .pop-up-container .sec3 .copy-msg-visible,
+body .saved-password-view .sec1 .copy-msg-visible,
+body .saved-password-view .sec2 .copy-msg-visible,
+body .saved-password-view .sec3 .copy-msg-visible {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+body .pop-up-container .sec1 .display-pass,
+body .pop-up-container .sec2 .display-pass,
+body .pop-up-container .sec3 .display-pass,
+body .saved-password-view .sec1 .display-pass,
+body .saved-password-view .sec2 .display-pass,
+body .saved-password-view .sec3 .display-pass {
+  position: relative;
+  margin: 0 10px;
+  width: 40%;
+  min-width: 300px;
+}
+
+body .pop-up-container .sec1 .display-pass label,
+body .pop-up-container .sec2 .display-pass label,
+body .pop-up-container .sec3 .display-pass label,
+body .saved-password-view .sec1 .display-pass label,
+body .saved-password-view .sec2 .display-pass label,
+body .saved-password-view .sec3 .display-pass label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+body .pop-up-container .sec1 .display-pass input,
+body .pop-up-container .sec2 .display-pass input,
+body .pop-up-container .sec3 .display-pass input,
+body .saved-password-view .sec1 .display-pass input,
+body .saved-password-view .sec2 .display-pass input,
+body .saved-password-view .sec3 .display-pass input {
+  overflow-x: scroll;
+  color: black;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 16px;
+  height: 50px;
+  border: 1px dashed rgba(119, 119, 119, 0.7);
+  background-color: #f6ea8c;
+}
+
+body .pop-up-container .sec1 .copy,
+body .pop-up-container .sec1 .opt-change,
+body .pop-up-container .sec1 .re-btn,
+body .pop-up-container .sec2 .copy,
+body .pop-up-container .sec2 .opt-change,
+body .pop-up-container .sec2 .re-btn,
+body .pop-up-container .sec3 .copy,
+body .pop-up-container .sec3 .opt-change,
+body .pop-up-container .sec3 .re-btn,
+body .saved-password-view .sec1 .copy,
+body .saved-password-view .sec1 .opt-change,
+body .saved-password-view .sec1 .re-btn,
+body .saved-password-view .sec2 .copy,
+body .saved-password-view .sec2 .opt-change,
+body .saved-password-view .sec2 .re-btn,
+body .saved-password-view .sec3 .copy,
+body .saved-password-view .sec3 .opt-change,
+body .saved-password-view .sec3 .re-btn {
+  margin: 0 10px;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #cb3b3b;
+  border: none;
+  color: white;
+  font-weight: 500;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+body .pop-up-container .sec1 .copy svg,
+body .pop-up-container .sec1 .opt-change svg,
+body .pop-up-container .sec1 .re-btn svg,
+body .pop-up-container .sec2 .copy svg,
+body .pop-up-container .sec2 .opt-change svg,
+body .pop-up-container .sec2 .re-btn svg,
+body .pop-up-container .sec3 .copy svg,
+body .pop-up-container .sec3 .opt-change svg,
+body .pop-up-container .sec3 .re-btn svg,
+body .saved-password-view .sec1 .copy svg,
+body .saved-password-view .sec1 .opt-change svg,
+body .saved-password-view .sec1 .re-btn svg,
+body .saved-password-view .sec2 .copy svg,
+body .saved-password-view .sec2 .opt-change svg,
+body .saved-password-view .sec2 .re-btn svg,
+body .saved-password-view .sec3 .copy svg,
+body .saved-password-view .sec3 .opt-change svg,
+body .saved-password-view .sec3 .re-btn svg {
+  width: 20px;
+  margin: 0 10px;
+}
+
+body .pop-up-container .sec1 .copy svg path,
+body .pop-up-container .sec1 .opt-change svg path,
+body .pop-up-container .sec1 .re-btn svg path,
+body .pop-up-container .sec2 .copy svg path,
+body .pop-up-container .sec2 .opt-change svg path,
+body .pop-up-container .sec2 .re-btn svg path,
+body .pop-up-container .sec3 .copy svg path,
+body .pop-up-container .sec3 .opt-change svg path,
+body .pop-up-container .sec3 .re-btn svg path,
+body .saved-password-view .sec1 .copy svg path,
+body .saved-password-view .sec1 .opt-change svg path,
+body .saved-password-view .sec1 .re-btn svg path,
+body .saved-password-view .sec2 .copy svg path,
+body .saved-password-view .sec2 .opt-change svg path,
+body .saved-password-view .sec2 .re-btn svg path,
+body .saved-password-view .sec3 .copy svg path,
+body .saved-password-view .sec3 .opt-change svg path,
+body .saved-password-view .sec3 .re-btn svg path {
+  stroke: white;
+}
+
+body .pop-up-container .sec1 .copy:hover,
+body .pop-up-container .sec1 .opt-change:hover,
+body .pop-up-container .sec1 .re-btn:hover,
+body .pop-up-container .sec2 .copy:hover,
+body .pop-up-container .sec2 .opt-change:hover,
+body .pop-up-container .sec2 .re-btn:hover,
+body .pop-up-container .sec3 .copy:hover,
+body .pop-up-container .sec3 .opt-change:hover,
+body .pop-up-container .sec3 .re-btn:hover,
+body .saved-password-view .sec1 .copy:hover,
+body .saved-password-view .sec1 .opt-change:hover,
+body .saved-password-view .sec1 .re-btn:hover,
+body .saved-password-view .sec2 .copy:hover,
+body .saved-password-view .sec2 .opt-change:hover,
+body .saved-password-view .sec2 .re-btn:hover,
+body .saved-password-view .sec3 .copy:hover,
+body .saved-password-view .sec3 .opt-change:hover,
+body .saved-password-view .sec3 .re-btn:hover {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+body .pop-up-container .sec1 .copy,
+body .pop-up-container .sec2 .copy,
+body .pop-up-container .sec3 .copy,
+body .saved-password-view .sec1 .copy,
+body .saved-password-view .sec2 .copy,
+body .saved-password-view .sec3 .copy {
+  position: relative;
+}
+
+body .pop-up-container .sec1 .copy::after,
+body .pop-up-container .sec2 .copy::after,
+body .pop-up-container .sec3 .copy::after,
+body .saved-password-view .sec1 .copy::after,
+body .saved-password-view .sec2 .copy::after,
+body .saved-password-view .sec3 .copy::after {
+  content: "Copy to Clipboard";
+  position: absolute;
+  top: -20px;
+  left: 5px;
+  font-weight: 400;
+  font-size: 12px;
+  color: black;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .pop-up-container .sec1 .copy:hover,
+body .pop-up-container .sec2 .copy:hover,
+body .pop-up-container .sec3 .copy:hover,
+body .saved-password-view .sec1 .copy:hover,
+body .saved-password-view .sec2 .copy:hover,
+body .saved-password-view .sec3 .copy:hover {
+  -webkit-transform: none;
+          transform: none;
+}
+
+body .pop-up-container .sec1 .copy:hover::after,
+body .pop-up-container .sec2 .copy:hover::after,
+body .pop-up-container .sec3 .copy:hover::after,
+body .saved-password-view .sec1 .copy:hover::after,
+body .saved-password-view .sec2 .copy:hover::after,
+body .saved-password-view .sec3 .copy:hover::after {
+  opacity: 1;
+  pointer-events: all;
+}
+
+body .pop-up-container .sec1 .save,
+body .pop-up-container .sec2 .save,
+body .pop-up-container .sec3 .save,
+body .saved-password-view .sec1 .save,
+body .saved-password-view .sec2 .save,
+body .saved-password-view .sec3 .save {
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+}
+
+body .pop-up-container .sec1 .save::before,
+body .pop-up-container .sec2 .save::before,
+body .pop-up-container .sec3 .save::before,
+body .saved-password-view .sec1 .save::before,
+body .saved-password-view .sec2 .save::before,
+body .saved-password-view .sec3 .save::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 10%;
+  height: 1px;
+  background-color: #da6131;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .pop-up-container .sec1 .save:hover::before,
+body .pop-up-container .sec2 .save:hover::before,
+body .pop-up-container .sec3 .save:hover::before,
+body .saved-password-view .sec1 .save:hover::before,
+body .saved-password-view .sec2 .save:hover::before,
+body .saved-password-view .sec3 .save:hover::before {
+  width: 100%;
+}
+
+body .pop-up-container .close-txt,
+body .pop-up-container .close-icon,
+body .saved-password-view .close-txt,
+body .saved-password-view .close-icon {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+body .pop-up-container .close-txt p,
+body .pop-up-container .close-icon p,
+body .saved-password-view .close-txt p,
+body .saved-password-view .close-icon p {
+  color: #cb3b3b;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+body .pop-up-container .close-icon,
+body .saved-password-view .close-icon {
+  top: 5px;
+  bottom: auto;
+  right: 20px;
+  font-size: 50px;
+}
+
+@media screen and (max-width: 730px) {
+  body .pop-up-container,
+  body .saved-password-view {
+    min-width: 600px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  body .pop-up-container,
+  body .saved-password-view {
+    min-width: 90%;
+    min-height: 430px;
+    padding: 20px;
+  }
+  body .pop-up-container .pop-up .pop-up-headline,
+  body .saved-password-view .pop-up .pop-up-headline {
+    margin: 10px 0;
+  }
+  body .pop-up-container .sec1,
+  body .pop-up-container .sec2,
+  body .pop-up-container .sec3,
+  body .saved-password-view .sec1,
+  body .saved-password-view .sec2,
+  body .saved-password-view .sec3 {
+    margin: 10px 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .pop-up-container .sec1 .display-pass,
+  body .pop-up-container .sec2 .display-pass,
+  body .pop-up-container .sec3 .display-pass,
+  body .saved-password-view .sec1 .display-pass,
+  body .saved-password-view .sec2 .display-pass,
+  body .saved-password-view .sec3 .display-pass {
+    min-width: 350px;
+  }
+  body .pop-up-container .sec1 .display-pass input,
+  body .pop-up-container .sec2 .display-pass input,
+  body .pop-up-container .sec3 .display-pass input,
+  body .saved-password-view .sec1 .display-pass input,
+  body .saved-password-view .sec2 .display-pass input,
+  body .saved-password-view .sec3 .display-pass input {
+    width: 100%;
+  }
+  body .pop-up-container .sec1 .display-pass,
+  body .pop-up-container .sec1 .copy,
+  body .pop-up-container .sec1 .opt-change,
+  body .pop-up-container .sec1 .re-btn,
+  body .pop-up-container .sec2 .display-pass,
+  body .pop-up-container .sec2 .copy,
+  body .pop-up-container .sec2 .opt-change,
+  body .pop-up-container .sec2 .re-btn,
+  body .pop-up-container .sec3 .display-pass,
+  body .pop-up-container .sec3 .copy,
+  body .pop-up-container .sec3 .opt-change,
+  body .pop-up-container .sec3 .re-btn,
+  body .saved-password-view .sec1 .display-pass,
+  body .saved-password-view .sec1 .copy,
+  body .saved-password-view .sec1 .opt-change,
+  body .saved-password-view .sec1 .re-btn,
+  body .saved-password-view .sec2 .display-pass,
+  body .saved-password-view .sec2 .copy,
+  body .saved-password-view .sec2 .opt-change,
+  body .saved-password-view .sec2 .re-btn,
+  body .saved-password-view .sec3 .display-pass,
+  body .saved-password-view .sec3 .copy,
+  body .saved-password-view .sec3 .opt-change,
+  body .saved-password-view .sec3 .re-btn {
+    margin: 10px;
+  }
+  body .pop-up-container .sec3 .save,
+  body .saved-password-view .sec3 .save {
+    margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  body .pop-up-container,
+  body .saved-password-view {
+    min-height: 470px;
+    padding: 15px;
+  }
+  body .pop-up-container .pop-up .pop-up-headline,
+  body .saved-password-view .pop-up .pop-up-headline {
+    max-width: 95%;
+  }
+  body .pop-up-container .pop-up .sec3 .save,
+  body .saved-password-view .pop-up .sec3 .save {
+    margin: 10px 0;
+  }
+  body .pop-up-container .sec1 .display-pass,
+  body .saved-password-view .sec1 .display-pass {
+    min-width: 320px;
+  }
+  body .pop-up-container .close-icon,
+  body .saved-password-view .close-icon {
+    font-size: 40px;
+    top: 3.5px;
+    right: 10px;
+  }
+  body .pop-up-container .close-txt p,
+  body .saved-password-view .close-txt p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body .pop-up-container,
+  body .saved-password-view {
+    min-height: 520px;
+    min-width: 98%;
+  }
+  body .pop-up-container .pop-up .pop-up-headline,
+  body .saved-password-view .pop-up .pop-up-headline {
+    max-width: 90%;
+    font-size: 17px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    font-weight: 500;
+  }
+  body .pop-up-container .sec1 .display-pass,
+  body .saved-password-view .sec1 .display-pass {
+    min-width: 95%;
+  }
+  body .pop-up-container .sec1 .display-pass input,
+  body .saved-password-view .sec1 .display-pass input {
+    font-size: 14px;
+    padding: 10px 10px;
+  }
+  body .pop-up-container .sec1 .display-pass label,
+  body .saved-password-view .sec1 .display-pass label {
+    font-size: 14px;
+  }
+}
+
+body .show-up {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  pointer-events: all;
+}
+
+body .saved-password-view-toggled {
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  height: 50%;
+  min-height: 300px;
+}
+
+@media screen and (max-width: 610px) {
+  body .saved-password-view-toggled {
+    min-height: 400px;
+  }
+}
+
+.wrapper {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.alert-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translate(-50%, -50%) scaleY(0);
+          transform: translate(-50%, -50%) scaleY(0);
+  width: 300px;
+  min-height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 10px;
+  background-color: rgba(255, 255, 255, 0.95);
+  -webkit-box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.05), -7px -7px 5px rgba(0, 0, 0, 0.05);
+          box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.05), -7px -7px 5px rgba(0, 0, 0, 0.05);
+  border: 2px solid rgba(235, 235, 235, 0.6);
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.alert-box .ok-btn {
+  color: black;
+  margin: 20px 0 0;
+  cursor: pointer;
+}
+
+.alert-box-toggle {
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transform: translate(-50%, -50%) scaleY(1);
+          transform: translate(-50%, -50%) scaleY(1);
+}
+/*# sourceMappingURL=main.css.map */
