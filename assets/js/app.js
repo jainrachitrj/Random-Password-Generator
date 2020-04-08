@@ -89,6 +89,31 @@ function displayPassword(password) {
   wrapper.style.position = "absolute";
 }
 
+function copyPassword(index) {
+  const elem = document.createElement("textarea");
+  if (index === 0) elem.value = displayField.value;
+  else elem.value = savedPasswordDisplayField.value;
+  elem.setAttribute("readonly", "");
+  elem.style.position = "absolute";
+  elem.style.left = "-9999px";
+  document.body.appendChild(elem);
+  const selected =
+    document.getSelection().rangeCount > 0
+      ? document.getSelection().getRangeAt(0)
+      : false;
+  elem.select();
+  document.execCommand("copy");
+  document.body.removeChild(elem);
+  if (selected) {
+    document.getSelection().removeAllRanges();
+    document.getSelection().addRange(selected);
+  }
+  copyMsg[index].classList.add("copy-msg-visible");
+  setTimeout(() => {
+    copyMsg[index].classList.remove("copy-msg-visible");
+  }, 2000);
+}
+
 function closePopUp() {
   popUp.classList.remove("show-up");
   if (alertBoxElem.classList.contains("alert-box-toggle")) {
@@ -421,30 +446,12 @@ reGen.addEventListener("click", () => {
 
 copyPass.forEach((cpPass, index) => {
   cpPass.addEventListener("click", () => {
-    const elem = document.createElement("textarea");
-    if (index === 0) elem.value = displayField.value;
-    else elem.value = savedPasswordDisplayField.value;
-    elem.setAttribute("readonly", "");
-    elem.style.position = "absolute";
-    elem.style.left = "-9999px";
-    document.body.appendChild(elem);
-    const selected =
-      document.getSelection().rangeCount > 0
-        ? document.getSelection().getRangeAt(0)
-        : false;
-    elem.select();
-    document.execCommand("copy");
-    document.body.removeChild(elem);
-    if (selected) {
-      document.getSelection().removeAllRanges();
-      document.getSelection().addRange(selected);
-    }
-    copyMsg[index].classList.add("copy-msg-visible");
-    setTimeout(() => {
-      copyMsg[index].classList.remove("copy-msg-visible");
-    }, 2000);
+    copyPassword(index);
   });
 });
+
+displayField.addEventListener("click", () => copyPassword(0));
+savedPasswordDisplayField.addEventListener("click", () => copyPassword(1));
 
 saveBtn.addEventListener("click", savePassword);
 
